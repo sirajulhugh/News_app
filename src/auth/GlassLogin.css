@@ -1,0 +1,162 @@
+/* === GLASSMORPHIC LOGIN STYLES === */
+
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: white;
+  gap: 2rem;
+}
+
+.login-left, .login-right {
+  flex: 1;
+  min-width: 300px;
+  margin: 1rem 0;
+}
+
+.bold-brand {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #dddddd;
+  margin-top: 0.5rem;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-box h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-container .icon {
+  position: absolute;
+  left: 12px;
+  color: #aaa;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.login-btn, .google-btn {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+}
+
+.login-btn:hover {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.google-btn {
+  background: white;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-logo {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.auth-error {
+  background-color: #ff4d4f;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.auth-success {
+  background-color: #52c41a;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.forgot-password {
+  color: #cccccc;
+  text-align: right;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.register-link .link-btn {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .bold-brand {
+    text-align: center;
+  }
+
+  .login-box {
+    width: 100%;
+  }
+}

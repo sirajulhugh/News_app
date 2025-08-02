@@ -1,0 +1,65 @@
+/* Avatar Styles */
+.avatar,
+.avatar-initial {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #555;
+  color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Layout */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0e0f11;
+  border-bottom: 1px solid #222;
+}
+
+/* User Info Layout */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.user-email {
+  color: #f1f1f1;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: linear-gradient(to right, #0a0a0a, #121212, #1a1a1a);
+  color: #ffffff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  letter-spacing: 0.3px;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(to right, #1c1c1c, #2a2a2a);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.logout-btn:active {
+  transform: scale(0.97);
+  box-shadow: none;
+}

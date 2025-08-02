@@ -1,0 +1,189 @@
+/* 🌟 Million-Dollar Modal Design */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px) saturate(120%);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 3rem 1.5rem;
+  z-index: 1000;
+  overflow-y: auto;
+  animation: fadeBackdrop 0.35s ease-in-out;
+}
+
+.modal-content {
+  background: linear-gradient(160deg, #1e1e1e, #0d0d0d);
+  border-radius: 18px;
+  padding: 2.75rem;
+  width: 100%;
+  max-width: 800px;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.7), inset 0 0 12px #202020;
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeScaleIn 0.45s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+/* Scrollbar */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 8px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+.modal-close:hover {
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeBackdrop {
+  from {
+    backdrop-filter: blur(0px) saturate(100%);
+  }
+  to {
+    backdrop-filter: blur(10px) saturate(120%);
+  }
+}
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Markdown Code Styling */
+.markdown-body code {
+  background: #222;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+.markdown-body pre {
+  background: #181818;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+/* Image in Modal */
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* Markdown Fonts */
+.markdown-body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+}
+/* 🪩 Neon-glow border for modal on hover */
+.modal-content:hover {
+  box-shadow: 0 0 40px rgba(0, 198, 255, 0.15),
+              inset 0 0 14px rgba(255, 255, 255, 0.05),
+              0 0 12px #00c6ff70;
+  border: 1px solid rgba(0, 198, 255, 0.15);
+}
+
+/* 🎯 Add tactile button animation */
+.update-btn, .cancel-btn {
+  transition: all 0.3s ease-in-out;
+}
+.update-btn:active,
+.cancel-btn:active {
+  transform: scale(0.96);
+  filter: brightness(1.15);
+}
+
+/* 🌐 Reflection-like shine on top */
+.modal-content::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 10%;
+  width: 80%;
+  height: 8px;
+  background: linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  border-radius: 50%;
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+/* 🔝 Auto-scroll to top when modal opens */
+body.modal-open {
+  overflow: hidden;
+}
+.update-btn,
+.cancel-btn {
+  padding: 0.9rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  letter-spacing: 0.6px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.update-btn {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.4);
+}
+
+.update-btn:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+}
+
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #bbb;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #eee;
+  transform: scale(1.03) translateY(-1px);
+}
+

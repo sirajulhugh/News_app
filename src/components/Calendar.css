@@ -1,0 +1,83 @@
+.calendar {
+  width: 100%;
+  max-width: 36rem;
+  margin: 2rem auto;
+  background-color: #111214;
+  color: #f1f1f1;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navigate-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.month, .year {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.buttons i {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #66aaff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.buttons i:hover {
+  transform: scale(1.1);
+  color: #3399ff;
+}
+
+.Weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: 600;
+  color: #999;
+  margin-bottom: 0.6rem;
+}
+
+.day {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.days span {
+  padding: 0.8rem 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.days span:hover {
+  background-color: #1e1e1e;
+}
+
+.today {
+  background-color: #3399ff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.empty {
+  visibility: hidden;
+}
